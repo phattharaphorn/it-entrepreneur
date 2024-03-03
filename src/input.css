@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.group-exercise {
+    @apply text-4xl underline font-bold text-indigo-900 drop-shadow;
+}
+
+.flex-center {
+    @apply w-full flex items-center justify-center flex-wrap;
+}
+
+.flex-responsive {
+    @apply flex-center flex-col md:flex-row flex-wrap;
+}
+
+.side {
+    @apply flex-center px-1 md:px-16 flex-wrap;
+}
+
+.side-label {
+    @apply w-1/3 text-2xl;
+}
+
+.input-side {
+    @apply w-2/3 textbox-bg cursor-text;
+}
+
+.textbox-bg {
+    @apply bg-yellow-100 border-solid border-black border-2;
+}
+
+.output {
+    @apply w-full flex items-center justify-between flex-wrap px-1 md:px-16;
+}

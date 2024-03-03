@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./output.css" rel="stylesheet">
+        <title>Triangle App</title>
+    </head>
+
+    <body class="p-3 md:p-16">
+        <div class="flex-center p-8 group-exercise">Group exercise</div>
+
+        <div class="flex-responsive md:h-[40vh]">
+            <div class="basis-1/2 h-full flex-center bg-violet-200 p-4 border-solid border-2 border-black">
+                <div class="flex-center p-2 text-3xl">Enter the length of sides</div>
+
+                <form action="./index.js" class="flex-center flex-col gap-2">
+                    <div class="side">
+                        <label class="side-label" for="side1">Side 1</label>
+                        <input class="input-side" type="number" id="side1" name="side1" min="0" max="1000" step="0.00000001">
+                    </div>
+                    <div class="side">
+                        <label class="side-label" for="side2">Side 2</label>
+                        <input class="input-side" type="number" id="side2" name="side2" min="0" max="1000" step="0.00000001">
+                    </div>
+                    <div class="side">
+                        <label class="side-label" for="side3">Side 3</label>
+                        <input class="input-side" type="number" id="side3" name="side3" min="0" max="1000" step="0.00000001">
+                    </div>
+
+                    <div class="side">
+                        <div class="side-label"></div>
+                        <h3 class="side-label">Result</h3>
+                    </div>
+
+                    <div class="output">
+                        <input class="text-2xl textbox-bg cursor-pointer" type="submit" value="Enter">
+                        <input class="input-side" type="text" id="result" name="result" readonly>
+                    </div>
+                </form>
+            </div>
+            
+            <img class="basis-1/2 w-full h-full object-contain" src="./images/triangle.png" alt="Triangle Types">
+        </div>
+    </body>
+</html>
