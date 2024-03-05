@@ -544,41 +544,36 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.h-1\/2 {
-  height: 50%;
+.h-20 {
+  height: 5rem;
 }
 
 .h-full {
   height: 100%;
 }
 
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
+.h-8 {
+  height: 2rem;
 }
 
-.h-\[\] {
-  height: ;
+.h-6 {
+  height: 1.5rem;
 }
 
-.h-\[50\] {
-  height: 50;
+.h-7 {
+  height: 1.75rem;
 }
 
-.h-\[50vh\] {
-  height: 50vh;
+.min-h-full {
+  min-height: 100%;
 }
 
-.h-\[40vh\] {
-  height: 40vh;
+.min-h-7 {
+  min-height: 1.75rem;
 }
 
 .w-full {
   width: 100%;
-}
-
-.flex-auto {
-  flex: 1 1 auto;
 }
 
 .basis-1\/2 {
@@ -589,8 +584,16 @@ video {
   cursor: pointer;
 }
 
+.resize-y {
+  resize: vertical;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .gap-2 {
