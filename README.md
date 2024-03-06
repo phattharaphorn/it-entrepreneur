@@ -3,4 +3,4 @@
 # IT - Entrepreneur
 IT Entrepreneurship and Management (01076422), Computer Engineering 60 at KMITL.
 
-- This repository about 
+- This repository about of
