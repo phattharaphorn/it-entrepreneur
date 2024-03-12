@@ -6,27 +6,37 @@ function calculateTriangleTypes(event) {
     let sideB = document.getElementById('sideB').value
     let sideC = document.getElementById('sideC').value
 
-    if (isInputValid([sideA, sideB, sideC], 'Please enter a number of length of side', '', true)) {
-        if (isInputValid([sideA, sideB, sideC], 'The length of side', ' must be greater than 0', false)) {
-            if (isTriangle(sideA, sideB, sideC)) {
-                const triangleType = getTriangleType(sideA, sideB, sideC)
-                document.getElementById('result').innerHTML = `${triangleType} Triangle`
-            } else {
-                document.getElementById('result').innerHTML = 'The inputs provided cannot make a triangle.'
+    if (isInputValid([sideA, sideB, sideC], 'Please enter a number of length of side', '', 0)) {
+        if (isInputValid([sideA, sideB, sideC], 'The length of side', ' must be greater than 0', 1)) {
+            if (isInputValid([sideA, sideB, sideC], 'Please enter a number 1 - 99. side', '', 2)) {
+                sideA = parseInt(sideA)
+                sideB = parseInt(sideB)
+                sideC = parseInt(sideC)
+                if (isTriangle(sideA, sideB, sideC)) {
+                    const triangleType = getTriangleType(sideA, sideB, sideC)
+                    document.getElementById('result').innerHTML = `${triangleType} Triangle`
+                } else {
+                    document.getElementById('result').innerHTML = 'The inputs provided cannot make a triangle.'
+                }
             }
         }
     }
 }
 
 function isInputValid(sides, start_string, end_string, mode) {
-    // mode = true -> isInput, mode = false -> isNumber
-    console.log(sides)
+    // mode = 0 -> check all inputs is not null
+    // mode = 1 -> check all inputs is number, greater than 0
+    // mode = 2 -> check all inputs is between 1-99
+
     let output = start_string
     for (let i=0;i<sides.length;i++) {
-        if ((sides[i] == '' && mode) || (isNaN(parseFloat(sides[i])) && !mode)) {
+        if ((sides[i] == '' && mode == 0) || 
+            (isNaN(parseInt(sides[i])) && mode == 1) || 
+            ((parseInt(sides[i]) < 1 || parseInt(sides[i]) > 99) && mode == 2 )) {
             output += ` ${i+1}`
         }
     }
+
     if (output != start_string) {
         output += end_string
         document.getElementById('result').innerHTML = output
