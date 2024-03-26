@@ -3,4 +3,9 @@
 # IT - Entrepreneur
 IT Entrepreneurship and Management (01076422), Computer Engineering 60 at KMITL.
 
-- This repository about 
+- This repository about Requirement specification defines the hours you spend, and the person (manpower) and measures the result.
+
+## Assignment Directory
+- [Code](cell-00)
+- [Requirement Design document](cell-00)
+
